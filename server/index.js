@@ -20,6 +20,9 @@ const {getBlogTable, getAllBlogTable, getSingleBlogTable, addNewBlogPost, delete
 const {getSalesTable, addNewSalesPost, deleteSalesPost, deleteAllSalesPost, editSalesPost} = require('./controllers/salestable')
 const {getGalleryTable, addNewGalleryImg, deleteGalleryImg} = require('./controllers/gallerytable')
 const {getPreviewTable, addPreview, deletePreview, editPreview, getSinglePreview} = require('./controllers/previewtable')
+const {getQuill, postQuill} = require('./controllers/postquill')
+
+
 
 const app = express();
 app.use(express.json())
@@ -63,6 +66,8 @@ app.get('/gallery', getGalleryTable)
 app.post('/newgalleryimg', addNewGalleryImg)
 app.delete('/deletegalleryimg/:gallerytableid', deleteGalleryImg)
 
+app.get('/getquill', getQuill)
+app.post('/postquill', postQuill)
 
 
 
