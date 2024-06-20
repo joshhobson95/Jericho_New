@@ -22,58 +22,75 @@ function FFC() {
         <meta property="og:type" content="website" />
 </Helmet>
 
+
+<img className='ffc_iconf' src='https://jericho-content.nyc3.cdn.digitaloceanspaces.com/New_FFC/Nice%2010(2).png' />
+<img className='ffc_iconf1' src='https://jericho-content.nyc3.cdn.digitaloceanspaces.com/New_FFC/Nice%2010(1).png' />
+<img className='ffc_iconf2' src='https://jericho-content.nyc3.cdn.digitaloceanspaces.com/New_FFC/Nice%2010.png' />
+
         <div className='ffc_welcome'>
             <h1>Frequent Flower Club</h1>
                 <p>
-                    Join Jericho's Newsletter, Email and Rewards Club
+                    A new and imporved points system, with all the same connectedness you know and love
                </p>
         </div>
 
 
-<div className='ffc_body'>
-            <div className='ffc_body_top'>
-                <h1 className='w_it_is'>What it is</h1>
-                <img alt='Frequent Flower Club Logo' src={ffc3} className='ffc3'/>
-                <p>
-                We are asked for our email address hundreds of times for every time we are asked for our mailing address, right? Well, the form you see on this screen really does ask for your mailing address, because several times a year we will be sending cards to members of the Jericho Frequent Flower Club. The cards will contain something of value, and we will be asking for your phone number as you check out in order to have a record of your choice to shop Jericho for all your yard and garden needs. 
+            <div className='ffc_body'>
 
-                <br></br>
-                <br></br>
-         
-                </p>
-                <img alt='Frequent Flower Club at Jericho Nursery' src='https://images.unsplash.com/photo-1455659817273-f96807779a8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80' className='ffc_sunflowers'/>
+                        <div className='ffc_body_top'>
+                        <h1>Welcome to Jericho's Frequent Flower Club</h1>
+
+                        <div className='ffc_introduction'>
+                            <img className='jericho_ffc_flower' src='https://jericho-content.nyc3.cdn.digitaloceanspaces.com/New_FFC/main-Flower' alt='Jericho FFC homepage'/>
+                            <div className='ffc_intro_paragraph'>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  convallis justo sed sagittis facilisis. Donec dignissim ullamcorper  pulvinar. Proin dolor arcu, malesuada at ligula id, laoreet accumsan  leo. Maecenas ornare augue vitae est tempor, in auctor quam condimentum.  Proin ac tempor erat. Phasellus sed luctus lectus. Nunc porta ut neque  vel malesuada. Nullam a elit tortor. Etiam libero sapien, faucibus in  massa et, consequat sagittis ante. Proin a neque odio. In est ligula,  tincidunt non nibh eget, tincidunt laoreet dolor. Aenean in elementum  ligula. </p>
+                            </div>
+                <div className='ffc_grid-wrapper'>
+                        <div className="ffc_grid-container">
+                        <div className="ffc_grid-item">
+                            <img src="https://jericho-content.nyc3.cdn.digitaloceanspaces.com/New_FFC/+100.png" alt="Icon 1" className="ffc_icon" />
+                            <span>Earn points for purchases</span>
+                        </div>
+                        <div className="ffc_grid-item">
+                            <img src="https://jericho-content.nyc3.cdn.digitaloceanspaces.com/New_FFC/5%25.png" alt="Icon 2" className="ffc_icon" />
+                            <span>Redeem Points for discounts</span>
+                        </div>
+                        <div className="ffc_grid-item">
+                            <img src="https://jericho-content.nyc3.cdn.digitaloceanspaces.com/New_FFC/Thumbsup.png" alt="Icon 3" className="ffc_icon" />
+                            <span>Get Points for interacting with our socials</span>
+                        </div>
+                        <div className="ffc_grid-item">
+                            <img src="https://jericho-content.nyc3.cdn.digitaloceanspaces.com/New_FFC/VIP.png" alt="Icon 4" className="ffc_icon" />
+                            <span>Become a Jericho VIP</span>
+                        </div>
+                        </div>
+                </div>
+
+
+                        <div className='ffc_sign_up'>
+                                <button>Sign Up</button>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+                        </div>
+
 
             </div>
 
-            <div className='ffc_body_bottom'>
-                <h1 className='w_you_get'>What you Get</h1>
-                <div className='b_h'>
-               
-               <div className='b_h_list'>
-                   <h2> These are the things we gurantee: </h2>
-                        <li>One Postcard Quarterly</li>
-                        <li>That Postcard will have a discount</li>
-                        <li>Enrollment to our email Newsletter to stay up to date with all Jericho events</li>
-                <img alt='Frequent Flower Club Logo' src={ffc3} className='ffc3_s'/>
-               </div>
-                
-             
-                <img alt='Frequent Flower Club at Jericho Nursery' src={arches} className='ffc_arches'/>
-                </div>
 
 
-                <h1 className='h_to_join'>How to Join</h1>
 
-                <div className='ffc_form_container_2'>
-                    <h3>Click the button below to open our Frequent Flower Club Sign Up Page</h3>
-                </div>
-            </div>
-                <div className='f_f'>   
 
-            
-                </div>
+
 </div>
-    </div>
   )
 }
 

@@ -2,7 +2,8 @@ import {useState, useContext} from 'react'
 import axios from 'axios'
 import './LoginPage.css'
 import Swal from 'sweetalert2'
-import AuthContext from '../../../store/authContext'
+import AuthContext from '../../../store/authContext' 
+import SignUp from './SignUp'
 
 
  
@@ -21,7 +22,7 @@ const LoginPage = () => {
             username,
             password, 
         }
-        const url = 'https://jericho-server.onrender.com'
+        const url = 'https://jericho-new-test-rich-text.onrender.com'
         axios.post(`${url}/login`, body)
             .then((res) => {
                 console.log('AFTER AUTH', res.data)
@@ -70,6 +71,10 @@ const LoginPage = () => {
                Login
             </button>
         </form>
+
+
+
+
       
        </main>
 </div>

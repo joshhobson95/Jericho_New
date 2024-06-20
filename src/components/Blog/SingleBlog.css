@@ -229,7 +229,50 @@ padding: 2rem;
     display: flex;
     flex-direction: row-reverse;
     padding: 2rem;
+}/* .rich-text styles (specific) */
+
+.rich-text li{
+    list-style-position: inside;
 }
+
+.rich-text {
+	/* Reset margin and padding for all elements within the container */
+	margin: 0;
+	padding: 0;
+  
+	/* Override Meyer reset styles for specific elements */
+	font-weight: inherit; /* Keep bold styles */
+	font-style: inherit; /* Keep italic styles */
+  
+	/* Lists */
+	.rich-text ul, .rich-text ol {
+	 
+	  list-style:circle; /* Keep list styles */
+	  list-style-position: inside !important;
+	  margin: 0; /* Reset margin for lists */
+	  padding: 0; /* Reset padding for lists */
+	}
+
+
+	.rich-text strong{
+		font-weight: 800 !important;
+	}
+	.rich-text em{
+		font-style: italic;
+	}
+  
+	/* Headers */
+
+  
+	/* Add more specific overrides as needed */
+  
+	/* Example: You can add more specific overrides for links if needed */
+	.rich-text a{
+	  text-decoration: underline; /* Keep link underlines */
+	  color: blue !important;
+	}
+  }
+  
 
 
 @media screen and (max-width: 1200px),

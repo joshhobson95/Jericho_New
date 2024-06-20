@@ -24,13 +24,18 @@
     font-weight: 600;
     font-size: 12pt;
     padding: 5vh;
+    z-index: 2;
 }
 .ffc_welcome h1{
-    color: #4FA673;
+    color: white;
     font-size: 26pt;
-    font-weight: 700;
+    font-weight: 900;
+    -webkit-text-stroke: 1px white;
+
 }
 .ffc_welcome p{
+    color: white;
+    margin-top: 1rem;
     padding: 1.5vw;
 }
 .ffc_body{
@@ -43,6 +48,7 @@
     flex-direction: column;
     margin-bottom: 10vh;
     border-radius: 20px;
+    z-index: 2;
 }
 .ffc_body_top p{
     color: white;
@@ -189,9 +195,88 @@
     color: #4FA673;
     transition: 1s
 }
+/* 
+/////////////////// */
+.jericho_ffc_flower{
+    width: 90vw;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+.ffc_body_top h1{
+    margin: 1rem;
+    margin-top: 2rem;
+    font-size: 25pt;
+    font-weight: 800;
+    color: white;
+    -webkit-text-stroke: 1px white;
+}
+.ffc_intro_paragraph{
+    font-weight: 500;
+}
+.ffc_grid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+.ffc_grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 400px;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  
+  .ffc_grid-item {
+    display: flex;
+    color: white;
+    font-weight: 700;
+    margin: 0.75rem;
 
+  }
+  
+  .ffc_icon {
+    width: auto; 
+    height: 24px;
+    margin-right: 8px; /* Space between icon and text */
+  }
 
+  .ffc_sign_up button{
+    margin: 1rem;
+    border: none;
+    color: white;
+    background-color: #8BC34A;
+    border-radius: 10px;
+    padding: 0.5rem 1.2rem;
+    font-size: 16pt;
+    font-weight: 700;
+  }
 
+.ffc_iconf{
+    width: 40vw;
+    z-index: 0;
+    position: absolute;
+    top: 430px;
+}
+.ffc_iconf1{
+    width: 50vw;
+    z-index: 0;
+    position: absolute;
+    left: 240px;
+    top: 260px;
+}
+.ffc_iconf2{
+    width: 60vw;
+    z-index: 0;
+    position: absolute;
+    top: 160px;
+
+}
+
+/* ///////////////////// */
 
 @media (min-width:1025px) { 
    

@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import './SingleBlogEdit.css'
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 
 
 
@@ -15,9 +18,10 @@ function SingleBlogEdit({match}) {
   const { id } = useParams();
   const [formData, setFormData] = useState([]);
   const [blogData, setBlogData] =useState([]);
+  const [editorHtml, setEditorHtml] = useState(blogData.body_1); // Initialize with the existing content
 
 useEffect(() => {
-  axios.get(`https://jericho-server.onrender.com/singleblog/${id}`)
+  axios.get(`https://jericho-new-test-rich-text.onrender.com/singleblog/${id}`)
   .then((response) => {
     setBlogData(response.data)
   })
@@ -31,7 +35,10 @@ useEffect(() => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .put(`https://jericho-server.onrender.com/editblogpost/${id}`, formData)
+      .put(`https://jericho-new-test-rich-text.onrender.com/editblogpost/${id}`,{
+        ...formData,
+    body_1: editorHtml
+      })
       .then((response) => {
         Swal.fire({
           title: "Blog Edited",
@@ -179,15 +186,17 @@ useEffect(() => {
           />
       </label>
       <label>
-       Body 1
-        <textarea
-          type="text"
-          name="body_1"
-          value={formData.body_1}
-          placeholder={blogData.body_1}
-          onChange={handleChange}
-          />
-      </label>
+  Body 1 -
+<p>
+  {blogData.body_1}
+</p>
+Must Rewrite -
+  <ReactQuill
+    value={editorHtml}
+    onChange={setEditorHtml}
+  />
+</label>
+
       <label>
         Link
         <input

@@ -10,7 +10,7 @@ const GetQuills = () => {
 
   const retrieveContent = async () => {
     try {
-      const response = await axios.get('http://localhost:5050/getquill');
+      const response = await axios.get('https://jericho-new-test-rich-text.onrender.com/getquill');
       const contentData = response.data;
 
       if (Array.isArray(contentData) && contentData.length > 0) {
@@ -28,7 +28,7 @@ const GetQuills = () => {
   };
 
   return (
-    <div>
+    <div className='rich-text'>
       <h2>Retrieved Content</h2>
       {retrievedContent.map((content, index) => (
         <div key={index} dangerouslySetInnerHTML={{ __html: content }} />

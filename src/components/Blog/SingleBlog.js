@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import Loading from '../../SVGs/Loading'
 import RelatedBlogs from './RelatedBlogs'
+import GetQuills from '../Quill/GetQuills'
 
 
 
@@ -17,7 +18,7 @@ function SingleBlog() {
 
 
   useEffect(() => {
-    axios.get(`https://jericho-server.onrender.com/singleblog/${blogIdNum}`)
+    axios.get(`https://jericho-new-test-rich-text.onrender.com/singleblog/${blogIdNum}`)
     .then((response) => {
   
       setBlogData([response.data])
@@ -72,13 +73,31 @@ function SingleBlog() {
             <div className='blog_paragraph_top'>
               {item.body_img_1 && <img alt='' src={item.body_img_1} className='body_img_1'/>}
               {item.span_yellow && <span className='span_yellow'>{item.span_yellow}</span>}
-              {item.body_1 && <p>{item.body_1}</p>}
+
+
+
+
+     {item.body_1 && (
+  <div className='rich-text' dangerouslySetInnerHTML={{ __html: item.body_1 }}></div>
+)}
+
+
+
+
               {item.link && <a href={item.link}  target="_blank" rel="noreferrer">
              <button>Link</button> 
                </a>}
             </div>
 
       </div>
+
+
+
+      <div className='rich-text'>
+
+          {/* <GetQuills /> */}
+
+        </div>
 
 
 

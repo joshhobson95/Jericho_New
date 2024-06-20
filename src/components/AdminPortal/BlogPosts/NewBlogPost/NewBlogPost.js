@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import ReactQuill from 'react-quill';
 import axios from "axios";
 import './NewBlogPost.css'
 import Swal from "sweetalert2";
@@ -18,6 +20,11 @@ import blog11 from '../../../../Assets/blogexample/b11.jpg'
 const NewBlogPost = () => {
   const navigate = useNavigate()
 
+  const [editorHtml, setEditorHtml] = useState('');
+
+  const handleEditorChange = (html) => {
+    setEditorHtml(html);
+  };
 
   const [formData, setFormData] = useState({
     title: ``,
@@ -70,11 +77,16 @@ const NewBlogPost = () => {
     tags: []
   });
 
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
     axios
-      .post("https://jericho-server.onrender.com/postpreview", formData)
+      .post("https://jericho-new-test-rich-text.onrender.com/postpreview",{
+    ...formData,
+    body_1: editorHtml
+      })
       .then((response) => {
         Swal.fire({
           title: "Blog Preview Initiated",
@@ -103,6 +115,17 @@ const NewBlogPost = () => {
       [event.target.name]: event.target.value,
     });
   };
+
+
+  const toolbarOptions = [
+    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+    ['bold', 'italic', 'underline', 'strike'],
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+    ['link'],
+    ['clean'] 
+  ];
+
+
 
   return (
     <div className="newBlog">
@@ -241,15 +264,19 @@ const NewBlogPost = () => {
           onChange={handleChange}
           />
       </label>
-      <label>
-       Body 1
-        <textarea
-          type="text"
-          name="body_1"
-          value={formData.body_1}
-          onChange={handleChange}
-          />
-      </label>
+    <label className="rich-text">
+      
+Body 1
+
+  <ReactQuill
+    value={editorHtml}
+    onChange={handleEditorChange}
+    modules={{
+      toolbar: toolbarOptions,
+    }}
+  />
+</label>
+
       <label>
         Link
         <input
