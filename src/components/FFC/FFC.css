@@ -2,7 +2,8 @@
     height: auto;
     padding-top: 5vh;
     width: 100vw;
-    background-image: linear-gradient(#DBBA4B, #4BA7DB, #DB4BD5CF) ;
+    height: 200vh;
+    background-image: linear-gradient(#dbba4b,#4ba7db,#db4bd5cf);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -23,7 +24,7 @@
     color:  #DBBA4B;
     font-weight: 600;
     font-size: 12pt;
-    padding: 5vh;
+    padding: 3vh;
     z-index: 2;
 }
 .ffc_welcome h1{
@@ -253,39 +254,126 @@
     padding: 0.5rem 1.2rem;
     font-size: 16pt;
     font-weight: 700;
+    cursor: pointer;
+  }
+  .ffc_sign_up button:hover{
+    background-color: white;
+    color: #8BC34A;
+    transition: 1s;
   }
 
-.ffc_iconf{
+  .icon_background_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  
+  .icon_background_container img {
+    position: absolute;
+    z-index: 1; 
+    overflow: hidden;
+  }
+  
+  .ffc_iconf {
     width: 40vw;
-    z-index: 0;
-    position: absolute;
-    top: 430px;
-}
-.ffc_iconf1{
+    top: 450px;
+    left: 20px;
+  }
+  
+  .ffc_iconf1 {
     width: 50vw;
-    z-index: 0;
-    position: absolute;
-    left: 240px;
+    left: 270px;
     top: 260px;
-}
-.ffc_iconf2{
+  }
+  
+  .ffc_iconf2 {
     width: 60vw;
-    z-index: 0;
-    position: absolute;
     top: 160px;
+    left: -10px;
+  }
+  .newffc_logo{
+    width: 18vw;
+    height: 18vw;
+  }
+  .newffc_container{
+    display: flex;
+    justify-content: center;
+  }
 
-}
+  .ffc_intro_paragraph h2{
+    color: white;
+    font-size: 20pt;
+    margin: 2rem;
+  }
+
 
 /* ///////////////////// */
 
+@media (min-width:725px) { 
+    .ffc_welcome{
+        flex-direction: row;
+    }
+    .welcome_text{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .newffc_logo{
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+
 @media (min-width:1025px) { 
+    .ffc_sign_up button{
+        font-size: 30pt;
+        margin: 4rem;
+        padding: 1rem 2rem;
+    }
+
+    .ffc_grid-item{
+        font-size: 18pt;
+    }
+    .ffc_grid-container{
+        max-width: 50vw;
+        gap: 50px;
+    }
+    .ffc_icon{
+        height: 50px;
+    }
+
+    .ffc_body_top h1{
+        font-size: 62pt;
+        padding: 2rem;
+    }
+
+    .ffc_iconf{
+        width: 20vw;
+        top: 1050px;
+        left: 100px;
+    }
+    .ffc_iconf1{
+        width: 30vw;
+        left: 890px;
+        top: 680px;
+    }
+    .ffc_iconf2{
+        width: 35vw;
+        top: 400px;
+    }
    
     .ffc_welcome{
         font-size: 18pt;
     }
     .ffc_welcome h1{
-        color: #4FA673;
-        font-size: 60pt;
+        font-size: 50pt;
         font-weight: 700;
         padding-bottom: 1rem;
     }
@@ -349,7 +437,51 @@
     .f_f button{
         font-size: 18pt;
     }
+    .header_container{
+        display: flex;
+        justify-content: center;
+    }
 
+
+
+}
+
+
+
+@media (min-width:1200px) { 
+    .ffc {
+        height: auto;
+        padding-top: 10vh;
+    }
+
+    .jericho_ffc_flower{
+        width: 80vw;
+    }
+    .newffc_logo{
+        width: 10vw;
+        height: 10vw;
+    }
+}
+
+
+@media (min-width:1600px) { 
+    .jericho_ffc_flower{
+        width: 70vw;
+    }
+    .ffc_body_top h1{
+        width: 70vw;
+        align-self: center;
+    }
+    .ffc_grid-container{
+        max-width: 30vw;
+    }
+}
+
+
+@media (min-width:2000px) { 
+    .jericho_ffc_flower{
+        width: 60vw;
+    }
 
 
 }

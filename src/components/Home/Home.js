@@ -13,6 +13,7 @@ import MoreAboutJericho from './MoreAboutJericho/MoreAboutJericho'
 import CallButton from '../ContactUs/CallButton';
 import MapButtonHome from './MapButtonHome';
 import HoursButton from './HoursButton';
+import NewFFC from '../../SVGs/NewFFC';
 
 import { Helmet } from 'react-helmet';
 
@@ -48,6 +49,10 @@ function Home() {
         <h1 className='w_2'>Jericho Nursery</h1>
         <h4 className='w_3'>All you Yard and Garden needs</h4>
 </div>
+</div>
+<div>
+  <p>whats</p>
+  <NewFFC />
 </div>
 
 <div className='hours_and'>
